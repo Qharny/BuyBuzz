@@ -25,7 +25,7 @@ class _EnhancedOnboardingState extends State<EnhancedOnboarding>
     subtitle: "Your Shopping Journey Begins Here",
     description:
         "Explore a curated collection of premium products from trusted vendors worldwide",
-    animationPath: "https://public.rive.app/community/runtime-files/2244-4437-loading-animation.riv",
+    animationPath: "assets/animations/riv/cart.riv",
     gradientColors: [
       const Color(0xFF845EC2),
       const Color(0xFF2C73D2),
@@ -36,7 +36,7 @@ class _EnhancedOnboardingState extends State<EnhancedOnboarding>
     subtitle: "Always Know Where Your Package Is",
     description:
         "Track your deliveries in real-time with precise location updates and estimated arrival times",
-    animationPath: "https://public.rive.app/community/runtime-files/2197-5283-delivery-truck-animation.riv",
+    animationPath: "assets/animations/riv/delivery.riv",
     gradientColors: [
       const Color(0xFF00C9A7),
       const Color(0xFF4D8076),
@@ -47,7 +47,7 @@ class _EnhancedOnboardingState extends State<EnhancedOnboarding>
     subtitle: "Safe and Easy Transactions",
     description:
         "Multiple payment options with bank-grade security to keep your transactions protected",
-    animationPath: "https://public.rive.app/community/runtime-files/2405-6282-payment-animation.riv",
+    animationPath: "assets/animations/riv/pay.riv",
     gradientColors: [
       const Color(0xFFFF8066),
       const Color(0xFFFF4B4B),
