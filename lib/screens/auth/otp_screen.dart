@@ -193,7 +193,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
                       GestureDetector(
                         onTap: () {
                           // TODO: Handle verify button tap
-                          Navigator.pushNamed(context, '/role');
+                          // Navigator.pushNamed(context, '/role');
                         },
                         child: Container(
                           padding: const EdgeInsets.symmetric(
