@@ -241,10 +241,10 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen>
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: Stack(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: Stack(
           children: [
             AnimatedBuilder(
               animation: _backgroundAnimation,
