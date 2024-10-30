@@ -1,3 +1,4 @@
+import 'package:buybuzz/screens/vendor/vendor_home.dart';
 import 'package:flutter/material.dart';
 
 class RoleSelectionScreen extends StatefulWidget {
@@ -12,7 +13,8 @@ class RoleSelectionScreen extends StatefulWidget {
   State<RoleSelectionScreen> createState() => _RoleSelectionScreenState();
 }
 
-class _RoleSelectionScreenState extends State<RoleSelectionScreen> with TickerProviderStateMixin {
+class _RoleSelectionScreenState extends State<RoleSelectionScreen>
+    with TickerProviderStateMixin {
   late AnimationController _backgroundController;
   late AnimationController _cardsController;
   late Animation<double> _backgroundAnimation;
@@ -21,7 +23,7 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen> with TickerPr
   @override
   void initState() {
     super.initState();
-    
+
     // Background animation setup
     _backgroundController = AnimationController(
       duration: const Duration(seconds: 2),
@@ -74,7 +76,47 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen> with TickerPr
     return SlideTransition(
       position: slideAnimation,
       child: GestureDetector(
-        onTap: () => widget.onRoleSelected?.call(title.toLowerCase()),
+        // onTap: () => widget.onRoleSelected?.call(title.toLowerCase()),
+        onTap: () {
+          // Navigate to the appropriate screen based on the selected role
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => RoleSelectionScreen(
+                onRoleSelected: (String role) {
+                  // Handle role selection here
+                  print('Selected role: $role');
+                  // Navigate to appropriate screen based on role
+                  if (role == 'vendor') {
+                    // Navigate to Vendor screen
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const VendorsPage(),
+                      ),
+                    );
+                  } else if (role == 'user') {
+                    // Navigate to User screen
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) => UserScreen(),
+                    //   ),
+                    // );
+                  } else if (role == 'delivery') {
+                    // Navigate to Delivery screen
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) => DeliveryScreen(),
+                    //   ),
+                    // );
+                  }
+                },
+              ),
+            ),
+          );
+        },
         child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           decoration: BoxDecoration(
@@ -227,12 +269,28 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen> with TickerPr
                       color: Colors.grey[600],
                     ),
                   ),
+                  TextButton(
+                    onPressed: () {
+                      // TODO: Navigate to vendors page
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => const VendorsPage(),
+                      //   ),
+                      // );
+                    },
+                    child: const Text(
+                      'Skip',
+                      style: TextStyle(fontSize: 16, color: Colors.blue),
+                    ),
+                  ),
                   const SizedBox(height: 40),
                   _buildRoleCard(
                     title: 'Vendor',
                     emoji: '🏪',
                     color: Colors.blue,
-                    description: 'Start selling your products and grow your business',
+                    description:
+                        'Start selling your products and grow your business',
                     slideAnimation: _cardSlideAnimations[0],
                   ),
                   _buildRoleCard(
