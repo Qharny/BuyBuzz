@@ -1,4 +1,6 @@
+import 'package:buybuzz/screens/auth/otp_screen.dart';
 import 'package:buybuzz/screens/onboard.dart';
+import 'package:buybuzz/screens/roleselect.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,6 +20,12 @@ class BuyBuzz extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const EnhancedOnboarding(),
+      routes: {
+        // '/login': (context) => const LoginScreen(),
+        // '/register': (context) => const RegisterScreen(),
+        '/otp': (context) => const OtpVerificationScreen(),
+        '/role': (context) => const RoleSelectionScreen(),
+      },
     );
   }
 }
