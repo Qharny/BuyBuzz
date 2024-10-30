@@ -3,18 +3,17 @@ import 'package:flutter/services.dart';
 
 class OtpVerificationScreen extends StatefulWidget {
   final void Function(String)? onOtpSubmitted;
-  
-  const OtpVerificationScreen({
-    super.key, 
-    this.onOtpSubmitted
-  });
+
+  const OtpVerificationScreen({super.key, this.onOtpSubmitted});
 
   @override
   State<OtpVerificationScreen> createState() => _OtpVerificationScreenState();
 }
 
-class _OtpVerificationScreenState extends State<OtpVerificationScreen> with SingleTickerProviderStateMixin {
-  final List<TextEditingController> _controllers = List.generate(4, (_) => TextEditingController());
+class _OtpVerificationScreenState extends State<OtpVerificationScreen>
+    with SingleTickerProviderStateMixin {
+  final List<TextEditingController> _controllers =
+      List.generate(4, (_) => TextEditingController());
   final List<FocusNode> _focusNodes = List.generate(4, (_) => FocusNode());
   late AnimationController _animationController;
   late Animation<double> _scaleAnimation;
@@ -37,7 +36,9 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> with Sing
     for (var i = 0; i < 4; i++) {
       _focusNodes[i].addListener(() {
         if (_focusNodes[i].hasFocus) {
-          _animationController.forward().then((_) => _animationController.reverse());
+          _animationController
+              .forward()
+              .then((_) => _animationController.reverse());
         }
       });
     }
@@ -139,7 +140,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> with Sing
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -190,7 +191,8 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> with Sing
                     const SizedBox(height: 40),
                     GestureDetector(
                       onTap: () {
-                        // Handle verify button tap
+                        // TODO: Handle verify button tap
+                        Navigator.pushNamed(context, '/role');
                       },
                       child: Container(
                         padding: const EdgeInsets.symmetric(
