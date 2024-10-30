@@ -1,5 +1,3 @@
-// ignore_for_file: file_names
-
 import 'package:buybuzz/screens/auth/login_screen.dart';
 import 'package:buybuzz/screens/auth/register_screen.dart';
 import 'package:flutter/material.dart';
