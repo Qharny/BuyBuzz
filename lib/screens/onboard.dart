@@ -1,3 +1,4 @@
+import 'package:buybuzz/screens/auth/auth_util/LoginOrRegisterPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -20,40 +21,40 @@ class _EnhancedOnboardingState extends State<EnhancedOnboarding>
   bool _isLastPage = false;
 
   final List<OnboardingData> _pages = [
-  OnboardingData(
-    title: "Discover Amazing Products",
-    subtitle: "Your Shopping Journey Begins Here",
-    description:
-        "Explore a curated collection of premium products from trusted vendors worldwide",
-    animationPath: "assets/animations/riv/cart.riv",
-    gradientColors: [
-      const Color(0xFF845EC2),
-      const Color(0xFF2C73D2),
-    ],
-  ),
-  OnboardingData(
-    title: "Real-Time Delivery Tracking",
-    subtitle: "Always Know Where Your Package Is",
-    description:
-        "Track your deliveries in real-time with precise location updates and estimated arrival times",
-    animationPath: "assets/animations/riv/delivery.riv",
-    gradientColors: [
-      const Color(0xFF00C9A7),
-      const Color(0xFF4D8076),
-    ],
-  ),
-  OnboardingData(
-    title: "Secure Payment Methods",
-    subtitle: "Safe and Easy Transactions",
-    description:
-        "Multiple payment options with bank-grade security to keep your transactions protected",
-    animationPath: "assets/animations/riv/pay.riv",
-    gradientColors: [
-      const Color(0xFFFF8066),
-      const Color(0xFFFF4B4B),
-    ],
-  ),
-];
+    OnboardingData(
+      title: "Discover Amazing Products",
+      subtitle: "Your Shopping Journey Begins Here",
+      description:
+          "Explore a curated collection of premium products from trusted vendors worldwide",
+      animationPath: "assets/animations/riv/cart.riv",
+      gradientColors: [
+        const Color(0xFF845EC2),
+        const Color(0xFF2C73D2),
+      ],
+    ),
+    OnboardingData(
+      title: "Real-Time Delivery Tracking",
+      subtitle: "Always Know Where Your Package Is",
+      description:
+          "Track your deliveries in real-time with precise location updates and estimated arrival times",
+      animationPath: "assets/animations/riv/delivery.riv",
+      gradientColors: [
+        const Color(0xFF00C9A7),
+        const Color(0xFF4D8076),
+      ],
+    ),
+    OnboardingData(
+      title: "Secure Payment Methods",
+      subtitle: "Safe and Easy Transactions",
+      description:
+          "Multiple payment options with bank-grade security to keep your transactions protected",
+      animationPath: "assets/animations/riv/pay.riv",
+      gradientColors: [
+        const Color(0xFFFF8066),
+        const Color(0xFFFF4B4B),
+      ],
+    ),
+  ];
 
   @override
   void initState() {
