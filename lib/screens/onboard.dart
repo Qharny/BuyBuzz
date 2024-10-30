@@ -137,6 +137,10 @@ class _EnhancedOnboardingState extends State<EnhancedOnboarding>
                       TextButton(
                         onPressed: () {
                           // Navigate to home
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return const LoginOrRegisterPage();
+                          }));
                         },
                         child: Text(
                           "Skip",
@@ -203,6 +207,10 @@ class _EnhancedOnboardingState extends State<EnhancedOnboarding>
                               );
                             } else {
                               // Navigate to home
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return const LoginOrRegisterPage();
+                              }));
                             }
                           },
                           style: ElevatedButton.styleFrom(
