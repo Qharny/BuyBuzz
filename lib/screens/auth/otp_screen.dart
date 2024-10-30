@@ -141,108 +141,110 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Positioned(
-              top: -160,
-              left: -30,
-              child: topWidget(screenSize.width),
-            ),
-            SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.all(24.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const SizedBox(height: 30),
-                    const Text(
-                      '🔒 Verification',
-                      style: TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 20),
-                    const Text(
-                      'Please enter the verification code',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.grey,
-                      ),
-                    ),
-                    const Text(
-                      'sent to your email',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.grey,
-                      ),
-                    ),
-                    const SizedBox(height: 50),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: List.generate(
-                        4,
-                        (index) => _buildOtpDigitField(index),
-                      ),
-                    ),
-                    const SizedBox(height: 40),
-                    GestureDetector(
-                      onTap: () {
-                        // TODO: Handle verify button tap
-                        Navigator.pushNamed(context, '/role');
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 20,
-                          horizontal: 100,
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          child: Stack(
+            children: [
+              Positioned(
+                top: -160,
+                left: -30,
+                child: topWidget(screenSize.width),
+              ),
+              SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(24.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const SizedBox(height: 30),
+                      const Text(
+                        '🔒 Verification',
+                        style: TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
                         ),
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(50.0),
+                      ),
+                      const SizedBox(height: 20),
+                      const Text(
+                        'Please enter the verification code',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.grey,
                         ),
-                        child: const Text(
-                          "Verify",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
+                      ),
+                      const Text(
+                        'sent to your email',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      const SizedBox(height: 50),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(
+                          4,
+                          (index) => _buildOtpDigitField(index),
+                        ),
+                      ),
+                      const SizedBox(height: 40),
+                      GestureDetector(
+                        onTap: () {
+                          // TODO: Handle verify button tap
+                          Navigator.pushNamed(context, '/role');
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 20,
+                            horizontal: 100,
                           ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text(
-                          "Didn't receive the code? ",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 14,
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(50.0),
                           ),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            // Handle resend code
-                          },
                           child: const Text(
-                            "Resend",
+                            "Verify",
                             style: TextStyle(
-                              color: Colors.blue,
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 18,
                             ),
                           ),
                         ),
-                      ],
-                    ),
-                  ],
+                      ),
+                      const SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            "Didn't receive the code? ",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 14,
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              // Handle resend code
+                            },
+                            child: const Text(
+                              "Resend",
+                              style: TextStyle(
+                                color: Colors.blue,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
