@@ -28,7 +28,7 @@ class BuyBuzz extends StatelessWidget {
         '/otp': (context) => const OtpVerificationScreen(),
         '/role': (context) => const RoleSelectionScreen(),
         '/home': (context) => const HomeScreen(),
-        '/bottom': (context) => const BottomNavBar(),
+        // '/bottom': (context) => const BottomNavBar(onTabChange: (int ) {  },),
       },
     );
   }

@@ -1,3 +1,4 @@
+import 'package:buybuzz/screens/Home/home_screen.dart';
 import 'package:buybuzz/screens/auth/auth_util/LoginOrRegisterPage.dart';
 import 'package:buybuzz/screens/bottom_navbar.dart';
 import 'package:flutter/material.dart';
@@ -140,7 +141,7 @@ class _EnhancedOnboardingState extends State<EnhancedOnboarding>
                           // Navigate to home
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return const BottomNavBar();
+                            return const HomeScreen();
                           }));
                         },
                         child: Text(
