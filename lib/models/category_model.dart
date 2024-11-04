@@ -6,10 +6,10 @@ class Category {
 }
 
 final List<Category> categories = [
-  Category(image: "", title: ""),
-  Category(image: "", title: ""),
-  Category(image: "", title: ""),
-  Category(image: "", title: ""),
-  Category(image: "", title: ""),
-  Category(image: "", title: ""),
+  Category(image: "images/pay.jpeg", title: "shoes"),
+  Category(image: "images/pay.jpeg", title: "shorts"),
+  Category(image: "images/pay.jpeg", title: "shirts"),
+  Category(image: "images/pay.jpeg", title: "toes"),
+  Category(image: "images/pay.jpeg", title: "nails"),
+  Category(image: "images/pay.jpeg", title: "weddings"),
 ];

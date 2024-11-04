@@ -10,7 +10,7 @@ class BottomNavBar extends StatelessWidget {
     return GNav(
       onTabChange: (value) => onTabChange!(value),
       gap: 8,
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       tabs: const [
         GButton(
           icon: Icons.grid_view_outlined,

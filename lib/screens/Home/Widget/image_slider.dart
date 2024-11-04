@@ -23,7 +23,7 @@ class ImageSlider extends StatelessWidget {
               children: [
                 Image.asset(
                   'assets/animations/riv/mycart.png',
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
                 Image.asset(
                   'images/pay.jpeg',
@@ -50,10 +50,10 @@ class ImageSlider extends StatelessWidget {
               children: List.generate(
                   5,
                   (index) => AnimatedContainer(
-                        duration: Duration(milliseconds: 300),
+                        duration: const Duration(milliseconds: 300),
                         width: currentSlide == index ? 15 : 0,
                         height: 8,
-                        margin: EdgeInsets.only(right: 3),
+                        margin: const EdgeInsets.only(right: 3),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: currentSlide == index

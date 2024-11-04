@@ -1,15 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:buybuzz/models/card_model.dart';
-import 'package:buybuzz/screens/Cart/cart_screen.dart';
-import 'package:buybuzz/screens/Home/Widget/category.dart';
-import 'package:buybuzz/screens/favorite.dart';
-import 'package:buybuzz/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../bottom_navbar.dart';
-import 'Widget/home_app_bar.dart';
-import 'Widget/image_slider.dart';
+import 'category.dart';
+import 'home_app_bar.dart';
+import 'image_slider.dart';
+import 'serach.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,37 +15,23 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 0;
   int currentSlide = 0;
-  void navigateBottomBar(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
-  final List<Widget> _pages = [
-    HomeScreen(),
-    Favourite(),
-    CartScreen(),
-    ProfileScreen(),
-  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavBar(
-        onTabChange: (index) => navigateBottomBar(index),
-      ),
-      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 35),
+              const SizedBox(height: 25),
               const CustomAppBar(),
-              const SizedBox(height: 20),
+              const SizedBox(height: 15),
+              const TextRule(),
+              const SizedBox(height: 10),
+
               ImageSlider(
                   onChange: (value) {
                     setState(() {
@@ -57,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     });
                   },
                   currentSlide: currentSlide),
-              SizedBox(height: 20),
+              // const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
@@ -74,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                 ],
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               //for categories
               Categories(),
               Row(
@@ -93,11 +75,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               GridView.builder(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                   ),
                   // itemCount: products.length,

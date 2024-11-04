@@ -1,6 +1,5 @@
-import 'package:buybuzz/screens/Home/home_screen.dart';
+import 'package:buybuzz/screens/Home/main_screen.dart';
 import 'package:buybuzz/screens/auth/auth_util/LoginOrRegisterPage.dart';
-import 'package:buybuzz/screens/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -141,7 +140,7 @@ class _EnhancedOnboardingState extends State<EnhancedOnboarding>
                           // Navigate to home
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return const HomeScreen();
+                            return const MainScreen();
                           }));
                         },
                         child: Text(

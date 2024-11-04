@@ -12,7 +12,9 @@ class CustomAppBar extends StatelessWidget {
       children: [
         IconButton(
           style: IconButton.styleFrom(
-              backgroundColor: Colors.white, padding: EdgeInsets.all(20)),
+            // backgroundColor: Colors.white,
+            padding: EdgeInsets.all(10),
+          ),
           onPressed: () {},
           icon: Image.asset(
             'images/mobilshopbag.jpeg',
@@ -21,7 +23,9 @@ class CustomAppBar extends StatelessWidget {
         ),
         IconButton(
             style: IconButton.styleFrom(
-                backgroundColor: Colors.white, padding: EdgeInsets.all(20)),
+              // backgroundColor: Colors.white,
+              padding: EdgeInsets.all(20),
+            ),
             onPressed: () {},
             iconSize: 30,
             icon: const Icon(Icons.notifications_outlined)),
