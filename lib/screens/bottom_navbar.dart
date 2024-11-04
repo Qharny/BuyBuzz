@@ -31,7 +31,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         },
         shape: const CircleBorder(),
         backgroundColor: Colors.blue,
-        child: Icon(
+        child: const Icon(
           Icons.menu,
           color: Colors.white,
           size: 35,
