@@ -101,7 +101,7 @@ class LoginScreen extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     // navigate to otp screen
-                    Navigator.pushNamed(context, '/otp');
+                    Navigator.pushNamed(context, '/home');
                   },
                   child: Container(
                     // padding: EdgeInsets.all(15),

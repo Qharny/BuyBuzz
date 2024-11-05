@@ -1,6 +1,7 @@
 import 'package:buybuzz/screens/Home/main_screen.dart';
 import 'package:buybuzz/screens/auth/otp_screen.dart';
 import 'package:buybuzz/screens/onboard.dart';
+import 'package:buybuzz/screens/profile/edit_profile.dart';
 import 'package:buybuzz/screens/roleselect.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,7 @@ class BuyBuzz extends StatelessWidget {
         '/otp': (context) => const OtpVerificationScreen(),
         '/role': (context) => const RoleSelectionScreen(),
         '/home': (context) => const MainScreen(),
-        // '/bottom': (context) => const BottomNavBar(onTabChange: (int ) {  },),
+        '/edit': (context) => EditProfilePage(),
       },
     );
   }

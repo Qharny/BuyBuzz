@@ -21,7 +21,7 @@ class BottomNavBar extends StatelessWidget {
         ),
         GButton(
           icon: Icons.favorite_border_outlined,
-          text: 'likes',
+          text: 'favorite',
           // backgroundColor: Colors.grey,
           iconActiveColor: Colors.blue,
         ),

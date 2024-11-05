@@ -86,7 +86,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   // Handle edit profile
   Future<void> _handleEditProfile() async {
     // TODO: Navigate to edit profile screen and handle the result
-    final result = await Navigator.pushNamed(context, '/edit-profile');
+    final result = await Navigator.pushNamed(context, '/edit');
     if (result == true) {
       _loadUserData();
     }
@@ -302,22 +302,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   onTap: _handleLogout,
                 ),
 
-                // // Bottom Navigation
-                // const SizedBox(height: 32),
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //   children: [
-                //     IconButton(
-                //       icon: const Icon(Icons.home_outlined, size: 28),
-                //       onPressed: () => Navigator.pushNamed(context, '/home'),
-                //     ),
-                //     IconButton(
-                //       icon: const Icon(Icons.history, size: 28),
-                //       onPressed: () => Navigator.pushNamed(context, '/history'),
-                //     ),
-                //     const Icon(Icons.person, size: 28, color: Colors.green),
-                //   ],
-                // ),
               ],
             ),
           ),

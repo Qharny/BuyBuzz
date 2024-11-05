@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'category.dart';
 import 'home_app_bar.dart';
 import 'image_slider.dart';
-import 'serach.dart';
+import 'search.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
