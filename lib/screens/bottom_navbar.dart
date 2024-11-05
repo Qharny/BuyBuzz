@@ -7,21 +7,6 @@ class BottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            currentIndex = 2;
-          });
-        },
-        shape: const CircleBorder(),
-        backgroundColor: Colors.blue,
-        child: const Icon(
-          Icons.menu,
-          color: Colors.white,
-          size: 35,
-=======
     return GNav(
       onTabChange: (value) => onTabChange!(value),
       gap: 8,
@@ -33,7 +18,6 @@ class BottomNavBar extends StatelessWidget {
           // backgroundColor: Colors.grey,
           iconActiveColor: Colors.blue,
           curve: Cubic(1, 5, 12, 6),
->>>>>>> 3ad5dbe03d7b8299433efda193a59996e2605927
         ),
         GButton(
           icon: Icons.favorite_border_outlined,

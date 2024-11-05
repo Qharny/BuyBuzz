@@ -194,6 +194,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
                         onTap: () {
                           // TODO: Handle verify button tap
                           // Navigator.pushNamed(context, '/role');
+                          Navigator.pushNamed(context, '/home');
                         },
                         child: Container(
                           padding: const EdgeInsets.symmetric(
