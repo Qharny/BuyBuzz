@@ -40,22 +40,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                   currentSlide: currentSlide),
               // const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    "Curated for you",
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    "See all",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 16,
-                        color: Colors.black54),
-                  )
-                ],
-              ),
               const SizedBox(height: 10),
               //for categories
               Categories(),
@@ -64,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: const [
                   Text(
                     "Curated for you",
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                   Text(
                     "See all",
