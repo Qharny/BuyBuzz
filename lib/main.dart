@@ -1,3 +1,4 @@
+import 'package:buybuzz/screens/Home/Widget/home_screen.dart';
 import 'package:buybuzz/screens/Home/main_screen.dart';
 import 'package:buybuzz/screens/auth/otp_screen.dart';
 import 'package:buybuzz/screens/onboard.dart';
@@ -27,7 +28,7 @@ class BuyBuzz extends StatelessWidget {
         // '/register': (context) => const RegisterScreen(),
         '/otp': (context) => const OtpVerificationScreen(),
         '/role': (context) => const RoleSelectionScreen(),
-        '/home': (context) => const MainScreen(),
+        '/home': (context) => const HomeScreen(),
         '/edit': (context) => EditProfilePage(),
       },
     );

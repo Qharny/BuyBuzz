@@ -37,7 +37,8 @@ class ProductCard extends StatefulWidget {
   State<ProductCard> createState() => _ProductCardState();
 }
 
-class _ProductCardState extends State<ProductCard> with SingleTickerProviderStateMixin {
+class _ProductCardState extends State<ProductCard>
+    with SingleTickerProviderStateMixin {
   bool _isFavorite = false;
   late AnimationController _animationController;
   late Animation<double> _scaleAnimation;
@@ -66,7 +67,7 @@ class _ProductCardState extends State<ProductCard> with SingleTickerProviderStat
 
   Widget _buildDiscountBadge() {
     if (widget.discountPercentage == null) return const SizedBox.shrink();
-    
+
     return Positioned(
       top: 8,
       left: 8,
@@ -172,18 +173,25 @@ class _ProductCardState extends State<ProductCard> with SingleTickerProviderStat
 
   Color _getColorFromString(String colorStr) {
     switch (colorStr.toLowerCase()) {
-      case 'red': return Colors.red;
-      case 'blue': return Colors.blue;
-      case 'green': return Colors.green;
-      case 'black': return Colors.black;
-      case 'white': return Colors.white;
-      default: return Colors.grey;
+      case 'red':
+        return Colors.red;
+      case 'blue':
+        return Colors.blue;
+      case 'green':
+        return Colors.green;
+      case 'black':
+        return Colors.black;
+      case 'white':
+        return Colors.white;
+      default:
+        return Colors.grey;
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    final originalPrice = widget.price / (1 - (widget.discountPercentage ?? 0) / 100);
+    final originalPrice =
+        widget.price / (1 - (widget.discountPercentage ?? 0) / 100);
 
     return GestureDetector(
       onTapDown: (_) => _animationController.forward(),
@@ -194,7 +202,8 @@ class _ProductCardState extends State<ProductCard> with SingleTickerProviderStat
         scale: _scaleAnimation,
         child: Container(
           width: 200,
-          margin: const EdgeInsets.all(8),
+          height: 750,
+          margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(16),
@@ -213,16 +222,19 @@ class _ProductCardState extends State<ProductCard> with SingleTickerProviderStat
               Stack(
                 children: [
                   ClipRRect(
-                    borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(16)),
                     child: AspectRatio(
                       aspectRatio: 1,
-                      child: Image.network(
+                      child: Image.asset(
                         widget.imageUrl,
                         fit: BoxFit.cover,
                         errorBuilder: (context, error, stackTrace) {
                           return Container(
+                            height: MediaQuery.of(context).size.height,
                             color: Colors.grey[200],
-                            child: const Icon(Icons.image_not_supported, color: Colors.grey),
+                            child: const Icon(Icons.image_not_supported,
+                                color: Colors.grey),
                           );
                         },
                       ),
@@ -307,7 +319,7 @@ class _ProductCardState extends State<ProductCard> with SingleTickerProviderStat
                     _buildColorOptions(),
                     const SizedBox(height: 8),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

@@ -15,29 +15,22 @@ class DetailsAppBar extends StatelessWidget {
           IconButton(
               style: IconButton.styleFrom(
                 backgroundColor: kcontentor,
-                padding: EdgeInsets.all(15),
+                padding: EdgeInsets.all(10),
               ),
               onPressed: () {},
-              iconSize: 30,
+              iconSize: 20,
               icon: const Icon(Icons.arrow_back_ios)),
+          const Spacer(),
+          Text("Detail Product"),
           const Spacer(),
           IconButton(
               style: IconButton.styleFrom(
                 backgroundColor: kcontentor,
-                padding: EdgeInsets.all(15),
+                padding: EdgeInsets.all(10),
               ),
               onPressed: () {},
-              iconSize: 30,
-              icon: const Icon(Icons.share_outlined)),
-          SizedBox(width: 10),
-          IconButton(
-              style: IconButton.styleFrom(
-                backgroundColor: kcontentor,
-                padding: EdgeInsets.all(15),
-              ),
-              onPressed: () {},
-              iconSize: 30,
-              icon: const Icon(Icons.favorite)),
+              iconSize: 20,
+              icon: const Icon(Icons.email)),
         ],
       ),
     );

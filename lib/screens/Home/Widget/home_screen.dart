@@ -1,10 +1,12 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:buybuzz/models/card_model.dart';
 import 'package:flutter/material.dart';
 
 import 'category.dart';
 import 'home_app_bar.dart';
 import 'image_slider.dart';
+import 'product.dart';
 import 'search.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,13 +22,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 25),
+              const SizedBox(height: 15),
               const CustomAppBar(),
               const SizedBox(height: 15),
               const TextRule(),
@@ -59,16 +62,28 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                 ],
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 2),
               GridView.builder(
                   physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                   ),
-                  // itemCount: products.length,
+                  itemCount: products.length,
                   itemBuilder: (context, index) {
-                    return;
+                    final product = products[index];
+                    return ProductCard(
+                      imageUrl: product.imageUrl,
+                      name: product.name,
+                      price: product.price,
+                      rating: product.rating,
+                      reviews: product.review,
+                      isNew: product.isNew,
+                      discountPercentage: product.discountPercentage,
+                      stockCount: product.stockCount,
+                      colors: product.colors,
+                      onAddToCart: product.onAddToCart,
+                    );
                   })
             ],
           ),
