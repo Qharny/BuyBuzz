@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:buybuzz/screens/Cart/cart_screen.dart';
-import 'package:buybuzz/screens/Details/details_screen.dart';
 
 import 'package:buybuzz/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';

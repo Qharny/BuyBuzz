@@ -1,5 +1,4 @@
 import 'package:buybuzz/screens/Home/Widget/home_screen.dart';
-import 'package:buybuzz/screens/Home/main_screen.dart';
 import 'package:buybuzz/screens/auth/otp_screen.dart';
 import 'package:buybuzz/screens/onboard.dart';
 import 'package:buybuzz/screens/profile/edit_profile.dart';
