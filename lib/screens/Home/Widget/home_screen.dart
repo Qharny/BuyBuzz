@@ -18,12 +18,14 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
   int currentSlide = 0;
-  // late AnimationController _fadeController;
-  // late Animation<double> _fadeAnimation;
+  late AnimationController _fadeController;
+  late Animation<double> _fadeAnimation;
   bool _isMenuOpen = false;
 
   late AnimationController _menuController;
   late Animation<double> _menuAnimation;
+
+  int _selectedIndex = 0; // Track the selected index for bottom navigation
 
   @override
   void initState() {
@@ -43,6 +45,12 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       } else {
         _menuController.reverse();
       }
+    });
+  }
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index; // Update the selected index
     });
   }
 
@@ -130,10 +138,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
             child: FloatingActionButton(
               heroTag: "location",
               backgroundColor: Colors.blue,
-              // add hint
-              tooltip: 'Track your order',
-              onPressed: () {},
               child: const Icon(Icons.my_location),
+              onPressed: () {},
             ),
           ),
           const SizedBox(height: 16),
@@ -160,6 +166,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           ),
         ],
       ),
+      
     );
   }
 }
