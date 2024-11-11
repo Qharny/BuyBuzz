@@ -18,8 +18,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
   int currentSlide = 0;
-  late AnimationController _fadeController;
-  late Animation<double> _fadeAnimation;
+  // late AnimationController _fadeController;
+  // late Animation<double> _fadeAnimation;
   bool _isMenuOpen = false;
 
   late AnimationController _menuController;
