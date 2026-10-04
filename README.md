@@ -1,6 +1,5 @@
 # buybuzz
 
-an e-commerce
 
 ## Getting Started
 
